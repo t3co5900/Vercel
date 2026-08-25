@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>El Galpón de Tacuara</title>
+<meta name="description" content="Carta digital de El Galpón de Tacuara.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap">
+<style>
+html,body{margin:0;padding:0;overflow-x:hidden;background:#0d1414;-webkit-text-size-adjust:100%}
+body{font-family:Montserrat,sans-serif}
+a{color:#ff3d7f;text-decoration:none}
+a:hover{color:#ffc93c}
+::selection{background:#ff3d7f;color:#fff}
+button{font-family:inherit;-webkit-tap-highlight-color:transparent}
+[data-motion="ninguna"] *{animation:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@keyframes gShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes sunRise{0%{transform:translate(-50%,50px) scale(.75);opacity:0}100%{transform:translate(-50%,0) scale(1);opacity:.4}}
+@keyframes sunPulse{0%,100%{filter:blur(1px) brightness(1)}50%{filter:blur(2px) brightness(1.15)}}
+@keyframes flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.55}}
+@keyframes popIn{0%{transform:scale(.6) rotate(-14deg);opacity:0}70%{transform:scale(1.06) rotate(3deg)}100%{transform:scale(1) rotate(0);opacity:1}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+@keyframes titleIn{0%{transform:translateY(18px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes openIn{0%{opacity:0;transform:translateY(-8px) scale(.99)}100%{opacity:1;transform:none}}
+@keyframes rowIn{0%{opacity:0;transform:translateX(-10px)}100%{opacity:1;transform:none}}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(-2deg)}}
+@keyframes swayR{0%,100%{transform:rotate(7deg)}50%{transform:rotate(2deg)}}
+@keyframes barPulse{0%,100%{box-shadow:0 -6px 22px #ff3d7f55}50%{box-shadow:0 -6px 34px #ff3d7f99}}
+@keyframes fabIn{0%{opacity:0;transform:scale(.5)}100%{opacity:1;transform:none}}
+</style>
+</helmet>
+<div data-motion="{{ motion }}" style="position:relative;min-height:100vh;max-width:520px;margin:0 auto;color:#fff6e0;font-family:Montserrat,sans-serif;background:radial-gradient(circle at 12% 5%,#0f8b8f 0 5%,transparent 26%),radial-gradient(circle at 92% 16%,#ff3d7f 0 4%,transparent 22%),radial-gradient(circle at 78% 86%,#ffc93c 0 4%,transparent 20%),linear-gradient(165deg,#101616,#0a2b2c 45%,#160e14);background-size:auto,auto,auto,200% 200%;animation:gShift 26s ease-in-out infinite;padding-bottom:76px">
+
+<header style="position:relative;overflow:hidden;text-align:center;padding:26px 16px 24px;background:linear-gradient(125deg,#0a2f30 0%,#0f8b8f 44%,#ff3d7f 80%,#ffc93c 130%);background-size:220% 220%;animation:gShift 18s ease-in-out infinite;border-bottom:6px solid #ff3d7f;box-shadow:0 8px 24px #0009">
+  <div style="position:absolute;left:50%;bottom:-150px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#ffde7a,#ffc93c 45%,#ff3d7f 100%);opacity:.4;animation:sunRise 1.4s cubic-bezier(.2,.8,.2,1) both,sunPulse 7s ease-in-out 1.4s infinite"></div>
+  <div style="position:absolute;left:-70px;top:14px;width:190px;height:16px;border-radius:14px;background:#e8542f;opacity:.9;transform-origin:right center;animation:sway 7s ease-in-out infinite"></div>
+  <div style="position:absolute;right:-70px;top:14px;width:190px;height:16px;border-radius:14px;background:#c8e93e;opacity:.9;transform-origin:left center;animation:swayR 8s ease-in-out infinite"></div>
+  <div style="position:relative;z-index:2;margin:0 0 12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:#fff5f6;text-shadow:0 0 4px #fff,0 0 10px #ff1a2b,0 0 22px #ff1a2b,0 0 44px #ff1a2b;animation:flicker 5.5s linear infinite">Pensá global, consumí local</div>
+  <img src="assets/logo.png" alt="El Galpón de Tacuara" style="position:relative;z-index:2;width:124px;height:auto;display:block;margin:auto;background:#fff6e0;border-radius:50%;padding:7px;border:3px solid #ffc93c;filter:drop-shadow(0 8px 14px #000c);animation:popIn .9s cubic-bezier(.2,.9,.3,1.2) both,bob 6s ease-in-out .9s infinite">
+  <h1 style="position:relative;z-index:2;font-family:Anton,Impact,sans-serif;font-size:30px;line-height:.98;letter-spacing:.5px;margin:14px 0 2px;color:#fff;text-transform:uppercase;text-shadow:0 0 12px #ff3d7f99,3px 3px 0 #101713cc;animation:titleIn .8s cubic-bezier(.2,.8,.2,1) .2s both">El Galpón de Tacuara</h1>
+  <div style="position:relative;z-index:2;font:700 17px 'Barlow Condensed',sans-serif;letter-spacing:6px;color:#fff6e0;text-shadow:0 2px 0 #6b1f10,0 0 12px #000000aa;animation:titleIn .8s cubic-bezier(.2,.8,.2,1) .34s both">BELGRANO</div>
+</header>
+
+<sc-if value="{{ ticker }}" hint-placeholder-val="{{ true }}">
+<div style="overflow:hidden;background:#ff3d7f;border-bottom:3px solid #0c1414">
+  <div style="display:flex;width:max-content;animation:marquee 22s linear infinite;font:800 11px 'Barlow Condensed',sans-serif;letter-spacing:2.4px;color:#fff;padding:8px 0;text-transform:uppercase">
+    <div style="display:flex;gap:20px;padding-right:20px"><span>HAPPY HOUR 2X1 DESDE LAS 20HS</span><span>·</span><span>PIZZAS DE 8 PORCIONES</span><span>·</span><span>POOL $5.000 LA FICHA</span><span>·</span><span>MENÚ SIN TACC</span><span>·</span></div>
+    <div style="display:flex;gap:20px;padding-right:20px"><span>HAPPY HOUR 2X1 DESDE LAS 20HS</span><span>·</span><span>PIZZAS DE 8 PORCIONES</span><span>·</span><span>POOL $5.000 LA FICHA</span><span>·</span><span>MENÚ SIN TACC</span><span>·</span></div>
+  </div>
+</div>
+</sc-if>
+
+<nav style="position:sticky;top:0;z-index:30;background:#0c1414f2;backdrop-filter:blur(8px);border-bottom:2px solid #10403f;box-shadow:0 6px 18px #0008">
+  <div style="display:flex;gap:8px;padding:10px 12px;overflow-x:auto;scroll-snap-type:x proximity">
+    <button data-chip="promos" onClick="{{ t_promos }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">PROMOS</button>
+    <button data-chip="picar" onClick="{{ t_picar }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">PARA PICAR</button>
+    <button data-chip="hamb" onClick="{{ t_hamb }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">HAMBURGUESAS</button>
+    <button data-chip="sand" onClick="{{ t_sand }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">SANGUCHES</button>
+    <button data-chip="pizza" onClick="{{ t_pizza }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">PIZZAS</button>
+    <button data-chip="ens" onClick="{{ t_ens }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">ENSALADAS</button>
+    <button data-chip="mila" onClick="{{ t_mila }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">MILANESAS</button>
+    <button data-chip="beb" onClick="{{ t_beb }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">BEBIDAS</button>
+    <button data-chip="tragos" onClick="{{ t_tragos }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">TRAGOS</button>
+    <button data-chip="cerveza" onClick="{{ t_cerveza }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">CERVEZAS</button>
+    <button data-chip="vinos" onClick="{{ t_vinos }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">VINOS</button>
+    <button data-chip="tacc" onClick="{{ t_tacc }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">SIN TACC</button>
+    <button data-chip="pool" onClick="{{ t_pool }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:22px;border:1.5px solid #ffffff26;background:#ffffff12;color:#eafaf6;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.8px;white-space:nowrap;cursor:pointer;transition:all .22s;scroll-snap-align:center" style-active="transform:scale(.95)">POOL</button>
+  </div>
+</nav>
+
+<main style="padding:14px 12px 24px;display:flex;flex-direction:column;gap:10px">
+
+<section id="promos" data-screen-label="Promos" style="scroll-margin-top:64px">
+  <button onClick="{{ t_promos }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ffc93c;color:#18130e;box-shadow:5px 6px 0 #a52f16;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #a52f16">
+    <span style="flex:1">PROMOS · HAPPY HOUR 2X</span>
+    <sc-if value="{{ o_promos }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_promos }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_promos }}" hint-placeholder-val="{{ true }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="padding:10px 14px 4px;font:800 10px Montserrat,sans-serif;letter-spacing:1.4px;color:#8c6b3f">DESDE LAS 20HS HASTA EL CIERRE (SEGÚN EL DÍA)</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">VERMUT</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$15.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">FERNET</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$15.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">GIN TONIC</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$18.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CAIPIS</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$15.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CERVEZA CLÁSICA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$15.000</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="picar" data-screen-label="Para picar" style="scroll-margin-top:64px">
+  <button onClick="{{ t_picar }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#0aa39b;color:#fff;box-shadow:5px 6px 0 #043d38;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #043d38">
+    <span style="flex:1">PARA PICAR</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">9</span>
+    <sc-if value="{{ o_picar }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_picar }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_picar }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PAPAS FRITAS</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Papas rústicas fritas.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.500</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PAPAS CON PROVOLONE</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Papas con provolone arriba.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PAPAS CON CHEDDAR</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Papas fritas con cheddar, bacon y verdeo.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PAPAS BRAVAS</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Papas con salsa brava.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">NACHOS</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Con cheddar o queso provolone.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .2s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MUZZITAS</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">6 bastones de muzzarella.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .24s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">CHICKEN FINGER</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Pollo marinado en salmuera con rebozado en nachos y pan rallado.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .28s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">TAPEO CLÁSICO</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Papas, 4 chicken fingers, 4 muzzitas, 4 aros de cebolla y nachos.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$33.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .32s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#ffc93c 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">QUESADILLA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">De pollo o espinaca.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="hamb" data-screen-label="Hamburguesas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_hamb }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ff3d7f;color:#fff;box-shadow:5px 6px 0 #7a1339;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #7a1339">
+    <span style="flex:1">HAMBURGUESAS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">10</span>
+    <sc-if value="{{ o_hamb }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_hamb }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_hamb }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">CHEESE BURGUER MEDALLÓN</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Cheddar, cebolla morada, ketchup y mostaza.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">JIM BELIGATI</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, lechuga, cebolla morada, pepino y tomate.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">CRIOLLA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, salsa criolla, provolone, salsa Tacuara y lechuga.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">OKLAHOMA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, cebolla smash, mostaza y pepinos agridulces.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">WISCONSIN</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, cebolla caramelizada y manteca especiada.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .2s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">BBQ</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, salsa BBQ, muzzita, aro de cebolla y bacon.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .24s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">STACKER</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, bacon y salsa Stacker.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .28s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PAMPA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, sweet chilly, cebolla crispy y manteca especiada.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .32s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">GALPONERA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, mostaza, ketchup, bacon, cebolla morada y pepinillos.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$15.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .36s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ff3d7f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PULLED PORK</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Medallón, cheddar, bondiola braseada, bacon, BBQ y cebolla crispy.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$18.900</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="sand" data-screen-label="Sanguches" style="scroll-margin-top:64px">
+  <button onClick="{{ t_sand }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ffc93c;color:#18130e;box-shadow:5px 6px 0 #a52f16;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #a52f16">
+    <span style="flex:1">SANGUCHES</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.7">5</span>
+    <sc-if value="{{ o_sand }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_sand }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_sand }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#c8e93e 55%,#ffc93c);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">CLUB POLLO</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Pollo en hebras, lechuga, bacon, BBQ y salsa de queso.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#c8e93e 55%,#ffc93c);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">BONDIOLA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Bondiola braseada en birra, rúcula y coleslaw.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#c8e93e 55%,#ffc93c);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MILANESA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Milanesa con queso, mayonesa, lechuga y tomate, y huevo frito.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$17.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#c8e93e 55%,#ffc93c);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">VEGANO</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Tofu marinado en BBQ vegano, rúcula y pesto de tomate seco.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#0aa39b,#c8e93e 55%,#ffc93c);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MILA VEGAN</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Mila de berenjena, queso vegano, lechuga, tomate y mostaza.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="pizza" data-screen-label="Pizzas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_pizza }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#0aa39b;color:#fff;box-shadow:5px 6px 0 #043d38;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #043d38">
+    <span style="flex:1">PIZZAS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">4</span>
+    <sc-if value="{{ o_pizza }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_pizza }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_pizza }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ffc93c,#e8542f 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PIZZA DE MUZZARELLA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">8 porciones.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$20.000</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ffc93c,#e8542f 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">PIZZA NAPOLITANA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">8 porciones con tomate y ajo.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$20.000</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ffc93c,#e8542f 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">RÚCULA Y PARMESANO</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">8 porciones con rúcula y parmesano.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$20.000</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#ffc93c,#e8542f 55%,#ff3d7f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">CEBOLLA CARAMELO</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">8 porciones con cebolla caramelo.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$20.000</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="ens" data-screen-label="Ensaladas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_ens }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ff3d7f;color:#fff;box-shadow:5px 6px 0 #7a1339;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #7a1339">
+    <span style="flex:1">ENSALADAS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">2</span>
+    <sc-if value="{{ o_ens }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_ens }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_ens }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#c8e93e,#0aa39b 55%,#0f8b8f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">ENSALADA CAESAR</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Pollo, lechuga, queso, croutons y salsa Caesar.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$13.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#c8e93e,#0aa39b 55%,#0f8b8f);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MEDITERRÁNEA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Berenjena, rúcula, nueces, parmesano y tomate.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$13.900</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="mila" data-screen-label="Milanesas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_mila }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ffc93c;color:#18130e;box-shadow:5px 6px 0 #a52f16;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #a52f16">
+    <span style="flex:1">MILANESAS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.7">3</span>
+    <sc-if value="{{ o_mila }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_mila }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_mila }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;animation:rowIn .3s ease both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#e8542f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MILANESA CLÁSICA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Con papas fritas.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$16.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#e8542f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MILANESA AMERICANA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Cheddar, bacon, cebolla crispy y BBQ con fritas.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$19.900</div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 12px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><div style="flex:0 0 62px;height:62px;border-radius:12px;background:radial-gradient(circle at 34% 30%,#fff6e0 0 8%,transparent 9%),linear-gradient(160deg,#e8542f,#ffc93c 55%,#0aa39b);box-shadow:0 4px 10px #0006"></div><div style="flex:1;min-width:0"><div style="font:800 18px/1.03 'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase;color:#20160f">MILA NAPOLITANA</div><div style="font-size:11.5px;line-height:1.35;color:#6b573e;margin-top:3px">Fileto, muzza y rodajas de tomate con papas fritas.</div></div><div style="flex:0 0 auto;background:#ff3d7f;color:#fff;padding:7px 11px;border-radius:16px;font:800 14px Montserrat,sans-serif;box-shadow:2px 2px 0 #7a1339">$18.900</div></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="beb" data-screen-label="Bebidas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_beb }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#0aa39b;color:#fff;box-shadow:5px 6px 0 #043d38;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #043d38">
+    <span style="flex:1">BEBIDAS SIN ALCOHOL</span>
+    <sc-if value="{{ o_beb }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_beb }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_beb }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">COCA LATA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$3.600</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">SPRITE LATA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$3.600</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">POMELO LATA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$3.600</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">SPEED</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$3.600</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">LIMONADA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$6.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .2s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">AGUA CON O SIN GAS</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$2.900</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .24s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CERVEZA SIN ALCOHOL</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.500</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="tragos" data-screen-label="Tragos" style="scroll-margin-top:64px">
+  <button onClick="{{ t_tragos }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ff3d7f;color:#fff;box-shadow:5px 6px 0 #7a1339;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #7a1339">
+    <span style="flex:1">TRAGOS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">15</span>
+    <sc-if value="{{ o_tragos }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_tragos }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_tragos }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">FERNET</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .03s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CAMPARI</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .06s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CAIPIRIÑA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .09s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">APEROL SPRITZ</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$11.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">NEGRONI</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .15s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">VERMUT</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .18s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CYNAR JULEP</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .21s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">OLD FASHIONED</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .24s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">GIN TONIC</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$11.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .27s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">ACONCAGUA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$11.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .3s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">JAGGERINHA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .33s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">MOJITO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .36s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CUBA LIBRE</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .39s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">RAMAZOITI ROSATO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .42s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">DESTORNILLADOR</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$9.000</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="cerveza" data-screen-label="Cervezas" style="scroll-margin-top:64px">
+  <button onClick="{{ t_cerveza }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ffc93c;color:#18130e;box-shadow:5px 6px 0 #a52f16;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #a52f16">
+    <span style="flex:1">CERVEZAS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.7">7</span>
+    <sc-if value="{{ o_cerveza }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_cerveza }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_cerveza }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="padding:11px 14px 8px;font:800 11px Montserrat,sans-serif;letter-spacing:1.6px;color:#0f8b8f">ESPECIALES</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">IPA SESSYON</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">IPA SANFER</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="padding:14px 14px 8px;border-top:1px dashed #b8935c;font:800 11px Montserrat,sans-serif;letter-spacing:1.6px;color:#a52f16">CLÁSICAS</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">JIM MORRISON</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">SCOTTISH</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">HONEY</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .2s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">BLONDE</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.500</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:2px solid #20160f;animation:rowIn .3s ease .24s both"><b style="font:800 14px Montserrat,sans-serif;color:#20160f">GROWLER 1L PARA LLEVAR</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$17.000</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="vinos" data-screen-label="Vinos" style="scroll-margin-top:64px">
+  <button onClick="{{ t_vinos }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#0aa39b;color:#fff;box-shadow:5px 6px 0 #043d38;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #043d38">
+    <span style="flex:1">VINOS</span>
+    <span style="font:800 11px Montserrat,sans-serif;opacity:.8">5</span>
+    <sc-if value="{{ o_vinos }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_vinos }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_vinos }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">COPA DE VINO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$13.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">VINO C/ POMELO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$10.000</span></div>
+    <div style="padding:14px 14px 8px;border-top:1px dashed #b8935c;font:800 11px Montserrat,sans-serif;letter-spacing:1.6px;color:#7a1339">BOTELLAS</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">CORDERO C/ PIEL DE LOBO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$20.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .12s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">PERRO CALLEJERO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$28.000</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .16s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">COSECHA TARDÍA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$15.000</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="tacc" data-screen-label="Sin TACC" style="scroll-margin-top:64px">
+  <button onClick="{{ t_tacc }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ff3d7f;color:#fff;box-shadow:5px 6px 0 #7a1339;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #7a1339">
+    <span style="flex:1">MENÚ SIN TACC</span>
+    <sc-if value="{{ o_tacc }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_tacc }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_tacc }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">EMPANADAS DE CARNE</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.000 c/u</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .04s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">EMPANADAS DE VERDURA</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.000 c/u</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;border-top:1px dashed #b8935c;animation:rowIn .3s ease .08s both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">EMPANADAS DE JAMÓN Y QUESO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$8.000 c/u</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<section id="pool" data-screen-label="Pool" style="scroll-margin-top:64px">
+  <button onClick="{{ t_pool }}" style="width:100%;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 14px;border:2.5px solid #20160f;border-radius:14px;background:#ffc93c;color:#18130e;box-shadow:5px 6px 0 #a52f16;font:800 25px/1 'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;text-align:left;cursor:pointer;transition:transform .15s,box-shadow .15s" style-active="transform:translate(2px,3px);box-shadow:2px 3px 0 #a52f16">
+    <span style="flex:1">POOL</span>
+    <sc-if value="{{ o_pool }}" hint-placeholder-val="{{ false }}"><span style="font:800 22px/1 Montserrat,sans-serif">–</span></sc-if>
+    <sc-if value="{{ c_pool }}" hint-placeholder-val="{{ true }}"><span style="font:800 22px/1 Montserrat,sans-serif">+</span></sc-if>
+  </button>
+  <sc-if value="{{ o_pool }}" hint-placeholder-val="{{ false }}">
+  <div style="margin-top:8px;background:linear-gradient(150deg,#fff6e0,#ffe6b8);border:2.5px solid #20160f;border-radius:14px;box-shadow:5px 6px 0 #00000055;overflow:hidden;animation:openIn .35s ease both">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px;animation:rowIn .3s ease both"><b style="font:800 15px Montserrat,sans-serif;color:#20160f">FICHA 1 · 1 JUEGO</b><span style="font:900 15px Montserrat,sans-serif;color:#e8542f">$5.000</span></div>
+  </div>
+  </sc-if>
+</section>
+
+<div style="text-align:center;padding:24px 10px 6px;color:#dbc99d">
+  <b style="font:800 20px 'Barlow Condensed',sans-serif;letter-spacing:1px;color:#ffc93c;text-shadow:0 0 10px #ffc93c55;animation:flicker 8s linear infinite">BUENA COMIDA · BUENA CERVEZA · BUENOS AMIGOS</b>
+  <p style="margin:8px 0 0;font-size:10px;letter-spacing:1.6px;font-weight:800;opacity:.7">EL GALPÓN DE TACUARA · BELGRANO</p>
+</div>
+</main>
+
+<button ref="{{ topRef }}" onClick="{{ toTop }}" aria-label="Volver arriba" style="position:fixed;right:14px;bottom:64px;z-index:40;width:48px;height:48px;border-radius:50%;border:2px solid #20160f;background:#ffc93c;color:#18130e;font:800 20px/1 Montserrat,sans-serif;box-shadow:0 6px 16px #000a;cursor:pointer;display:none;animation:fabIn .3s ease both" style-active="transform:scale(.92)">↑</button>
+
+<div style="position:fixed;left:0;right:0;bottom:0;z-index:35;max-width:520px;margin:0 auto;background:#ff3d7f;border-top:3px solid #0c1414;padding:12px 14px;text-align:center;font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:2.2px;color:#fff;text-transform:uppercase;animation:barPulse 4s ease-in-out infinite">HAPPY HOUR 2X1 · DESDE LAS 20HS</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;completo&quot;,&quot;ninguna&quot;],&quot;default&quot;:&quot;completo&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Animación&quot;},&quot;ticker&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Animación&quot;},&quot;unaSeccion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportamiento&quot;}}">
+const KEYS = ['promos','picar','hamb','sand','pizza','ens','mila','beb','tragos','cerveza','vinos','tacc','pool'];
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = { open: { promos: true } };
+    this.topRef = React.createRef();
+  }
+  scroller(){
+    if (this._sc) return this._sc;
+    let n = this.topRef.current ? this.topRef.current.parentElement : null;
+    while (n && n !== document.body) {
+      const o = getComputedStyle(n).overflowY;
+      if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight + 4) { this._sc = n; return n; }
+      n = n.parentElement;
+    }
+    this._sc = document.body.scrollHeight > document.body.clientHeight + 4 ? document.body : (document.scrollingElement || document.documentElement);
+    return this._sc;
+  }
+  toggle(k){
+    const single = this.props.unaSeccion ?? true;
+    this.setState(s => {
+      const was = !!s.open[k];
+      const open = single ? {} : Object.assign({}, s.open);
+      if (!was) open[k] = true; else delete open[k];
+      return { open };
+    }, () => this.jump(k));
+  }
+  jump(k){
+    if (!this.state.open[k]) return;
+    const sec = document.getElementById(k);
+    const sc = this.scroller();
+    if (!sec || !sc) return;
+    requestAnimationFrame(() => {
+      const secTop = sec.getBoundingClientRect().top;
+      const scTop = sc === document.body || sc === document.documentElement ? 0 : sc.getBoundingClientRect().top;
+      sc.scrollTo({ top: (sc.scrollTop || 0) + secTop - scTop - 62, behavior: 'smooth' });
+    });
+  }
+  paintChips(){
+    const chips = Array.from(document.querySelectorAll('[data-chip]'));
+    chips.forEach(c => {
+      const on = !!this.state.open[c.dataset.chip];
+      c.style.background = on ? '#ff3d7f' : '#ffffff12';
+      c.style.borderColor = on ? '#ff3d7f' : '#ffffff26';
+      c.style.color = on ? '#fff' : '#eafaf6';
+      c.style.boxShadow = on ? '0 0 16px #ff3d7f99' : 'none';
+    });
+  }
+  componentDidMount(){
+    this.paintChips();
+    const sc = this.scroller();
+    this._onScroll = () => {
+      const top = sc.scrollTop || window.scrollY || 0;
+      if (this.topRef.current) this.topRef.current.style.display = top > 320 ? 'block' : 'none';
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    document.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
+    this._onScroll();
+  }
+  componentDidUpdate(){ this.paintChips(); }
+  componentWillUnmount(){
+    if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); document.removeEventListener('scroll', this._onScroll, true); }
+  }
+  renderVals(){
+    const v = {
+      motion: this.props.motion || 'completo',
+      ticker: this.props.ticker ?? true,
+      topRef: this.topRef,
+      toTop: () => { const sc = this.scroller(); sc.scrollTo({ top: 0, behavior: 'smooth' }); }
+    };
+    KEYS.forEach(k => {
+      v['o_' + k] = !!this.state.open[k];
+      v['c_' + k] = !this.state.open[k];
+      v['t_' + k] = () => this.toggle(k);
+    });
+    return v;
+  }
+}
+</script>
+</body>
+</html>
